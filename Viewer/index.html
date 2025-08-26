@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Android Remote Viewer</h2>
+    <video id="remote" autoplay playsinline></video>
+    <script>
+      const ws = new WebSocket("ws://YOUR_SERVER:8080");
+      ws.onmessage = (e) => console.log("Signal:", e.data);
+    </script>
+  </body>
+    </html>
